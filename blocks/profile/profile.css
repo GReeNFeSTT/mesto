@@ -1,0 +1,9 @@
+@import url(./__avatar/profile__avatar.css);
+@import url(./__button/profile__button.css);
+@import url(./__info/profile__info.css);
+
+.profile{
+    display: grid;
+    grid-template-columns: 20% 70% 10%;
+
+}
