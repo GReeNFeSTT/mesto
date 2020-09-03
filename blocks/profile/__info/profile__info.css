@@ -1,3 +1,13 @@
 @import url(./_button/profile__info_button.css);
 @import url(./_name/profile__info_name.css);
 @import url(./_proffesion/profile__info_profession.css);
+
+.profile__info{
+    display:flex;
+}
+@media screen and (max-width: 999px){
+    .profile__info{
+        flex-direction: column;
+        align-items: center;
+    }
+}

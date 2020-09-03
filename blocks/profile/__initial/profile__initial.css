@@ -1,0 +1,11 @@
+.profile__initial{
+    color: white;
+    margin-left: 30px;
+}
+@media screen and (max-width: 999px){
+    .profile__initial{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

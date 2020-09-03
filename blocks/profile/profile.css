@@ -1,9 +1,33 @@
 @import url(./__avatar/profile__avatar.css);
-@import url(./__button/profile__button.css);
+@import url(./__button/profile__button_action_edit.css);
+@import url(./__button/profile__button_action_none.css);
 @import url(./__info/profile__info.css);
 
 .profile{
-    display: grid;
-    grid-template-columns: 20% 70% 10%;
+    min-width: 868px;
+    max-width: 880px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-between;
+}
+@media screen and (max-width: 999px){
+    .profile{
+        min-width: 580px;
+        max-width: 560px;
+        width: 100%;
+        margin-top: 42px;
+        flex-direction: column;
+    }
+}
 
+@media screen and (max-width: 610px){
+    .profile{
+        min-width: 320px;
+        max-width: 310px;
+        width: 100%;
+        margin-top: 42px;
+        flex-direction: column;
+    }
 }
