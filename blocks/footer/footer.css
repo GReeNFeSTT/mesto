@@ -1,3 +1,5 @@
+@import url(./__copyright/footer__copyright.css);
+
 .footer{
     margin-right: auto;
     margin-left: auto;
@@ -17,6 +19,5 @@
     .footer{
         min-width: 320px;
         max-width: 310px;
-        width: 100%;
     }
 }

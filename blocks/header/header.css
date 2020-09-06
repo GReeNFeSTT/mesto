@@ -6,18 +6,17 @@
     margin-left: auto;
     margin-right: auto;
     padding-top: 45px;
-    height: 74px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-bottom: 1px solid #545454;
+    border-bottom: 1px solid rgba(84, 84, 84, .7);
 }
+
 @media screen and (max-width:  999px){
 .header{
         min-width: 99%;
         max-width: 100%;
         width: 100%;
         padding-top: 28px;
-        height: 56px;
     }
 }

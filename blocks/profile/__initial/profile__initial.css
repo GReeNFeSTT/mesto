@@ -1,3 +1,7 @@
+@import url(./__initial_name/profile__initial_name.css);
+@import url(./__initial_profession/profile__initial_profession.css);
+@import url(./__initial_edit/profile__initial_edit.css);
+
 .profile__initial{
     color: white;
     margin-left: 30px;

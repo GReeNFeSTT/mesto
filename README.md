@@ -1,10 +1,11 @@
-# Проект 4: Место
+# Проект 4: Место 
+# Сайт для обучения JavaScript
 
 ### Обзор
-
 * Figma
 * Картинки
 * GitHub
+* JavaScript
 
 **Figma**
 
@@ -12,12 +13,14 @@
 
 **Картинки**
 
-Доставал картинки из Фигмы.
+Доставал картинки из Фигмы и поместил в папку images.
 
 **GitHub**
 
 * [Ссылка на GitHub](https://greenfestt.github.io/mesto/index.html)
 
+**JavaScript**
+
+Сделал открытие и закрытие popup.
 
 
-Удачи!

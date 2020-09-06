@@ -1,13 +1,11 @@
-console.log('hay!')
-
+const popupSaveButton = document.querySelector('.popup__button')
 const popup = document.querySelector('.popup')
-const popupOpenButton = document.querySelector('.-js-profile__open-popup')
+const popupOpenButton = document.querySelector('.profile__initial_edit')
 const popupCloseButton = document.querySelector('.popup__close')
-const popupSaveButton = document.querySelector('.popup__profile')
 const nameInput = document.querySelector('.popup__item_el_name')
 const jobInput = document.querySelector('.popup__item_el_profession')
-const profileName = document.querySelector('.profile__info_name')
-const profileJob = document.querySelector('.profile__info_profession')
+const profileName = document.querySelector('.profile__initial_name')
+const profileJob = document.querySelector('.profile__initial_profession')
 
 console.log({popup, popupCloseButton, popupOpenButton})
 
@@ -19,7 +17,7 @@ const popupOpen = (event) => {
 }
 
 const popupClose = () => {
-    popup.classList.remove('popup_is-opened')
+    popup.classList.remove('popup_is-opened');
 }
 
 const popupCloseByClickOnOverlay = (event) => {
@@ -34,22 +32,19 @@ const popupCloseByClickOnOverlay = (event) => {
 }
 
 
+const formSubmitHandler = (event) => {
+    event.preventDefault();
+    profileName.textContent = nameInput.value;
+    profileJob.textContent = jobInput.value;
+    popupClose();
+}
+// Прикрепляем обработчик к форме:
+// он будет следить за событием “submit” - «отправка»
 
 popupOpenButton.addEventListener('click', popupOpen) 
 popupCloseButton.addEventListener('click', popupClose)
 popup.addEventListener('click', popupCloseByClickOnOverlay)
-
-
-
-const formSubmitHandler = (event) => {
-    event.preventDefault();
-        profileName.textContent = nameInput.value;
-        profileJob.textContent = jobInput.value;
-        popupClose();
-}
-// Прикрепляем обработчик к форме:
-// он будет следить за событием “submit” - «отправка»
-popupSaveButton.addEventListener('submit', formSubmitHandler);
+popupSaveButton.addEventListener('click', formSubmitHandler)
 //open
     //profileName.textContent = nameInput.value;
     // profileJob.textContent = jobInput.value;

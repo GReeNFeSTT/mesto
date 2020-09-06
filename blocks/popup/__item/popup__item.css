@@ -9,4 +9,6 @@
   font-size: 14px;
   font-family: inherit;
   max-width: 80%;
+  border-bottom: 1px solid rgba(0, 0, 0, .2) ;
+  
 }

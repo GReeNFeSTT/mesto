@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css" type="text/css"/>
+    <link rel="stylesheet" href="./styles/index.css" type="text/css"/>
     <title>Mesto</title>
 </head>
 <body>
@@ -16,53 +16,54 @@
                 <div class="profile__info">
                     <img class="profile__avatar" src="./images/avatar-image.jpg" alt="аватар">
                     <div class="profile__initial">
-                        <h1 class="profile__info_name">Жак-Ив Кусто<button class="-js-profile__open-popup profile__button_action_edit"></button></h1>
-                        <p class="profile__info_profession">Исследователь океана</p>
+                        <h1 class="profile__initial_name">Жак-Ив Кусто</h1>
+                        <p class="profile__initial_profession">Исследователь океана</p>
                     </div>
+                    <button class="profile__initial_edit" type="button"></button>
                 </div>
-                <button class="profile__button_action_none"></button>
+                <button class="profile__button" type="button"></button>
             </section>
             <section class="elements">
                 <div class="element">
                     <img class="element__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Изображение">
                     <div class="element__description">
                         <h2 class="element__title">Карачаевск</h2> 
-                        <button class="elements__button_like"></button>
+                        <button class="elements__like" type="button"></button>
                     </div>
                 </div>
                 <div class="element">
                     <img class="element__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Изображение">
                     <div class="element__description">
                         <h2 class="element__title">Карачаевск</h2> 
-                        <button class="elements__button_like"></button>
+                        <button class="elements__like" type="button"></button>
                     </div>
                 </div>
                 <div class="element">
                     <img class="element__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Изображение">
                     <div class="element__description">
                         <h2 class="element__title">Карачаевск</h2> 
-                        <button class="elements__button_like"></button>
+                        <button class="elements__like" type="button"></button>
                     </div>
                 </div>
                 <div class="element">
                     <img class="element__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Изображение">
                     <div class="element__description">
                         <h2 class="element__title">Карачаевск</h2> 
-                        <button class="elements__button_like"></button>
+                        <button class="elements__like" type="button"></button>
                     </div>
                 </div>
                 <div class="element">
                     <img class="element__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Изображение">
                     <div class="element__description">
                         <h2 class="element__title">Карачаевск</h2> 
-                        <button class="elements__button_like"></button>
+                        <button class="elements__like" type="button"></button>
                     </div>
                 </div>
                 <div class="element">
                     <img class="element__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Изображение">
                     <div class="element__description">
                         <h2 class="element__title">Карачаево-Черкессия</h2> 
-                        <button class="elements__button_like"></button>
+                        <button class="elements__like" type="button"></button>
                     </div>
                 </div>
             </section>
@@ -72,23 +73,20 @@
         </footer>
 
         <section class="popup">
-            <img class="popup__close" src="./images/Close_Icon.png" alt="закрыть попап">
+            <button class="popup__close" type="button"></button>
             <div class="popup__container">
                 
-                <div class="popup__content">
                  <h2 class="popup__title"> Редактировать профиль </h2>
-                     <form class="popup__profile">
+                     <form class="popup__profile" name="#" method="#" action="#">
                          <fieldset class="popup__input-container">
-                              <input type="text" class="popup__item popup__item_el_name" id="heading" name="heading" placeholder="Жак Ив Кусто" >
-                              <input type="text" class="popup__item popup__item_el_profession" id="subheading" name="subheading" placeholder="Исследователь океана">
+                              <input type="text" class="popup__item popup__item_el_name" id="heading" name="heading" placeholder="Имя Фамилия" >
+                              <input type="text" class="popup__item popup__item_el_profession" id="subheading" name="subheading" placeholder="Профессия">
                          </fieldset>
-                         <button class="popup__button_save">Сохранить</button>
+                         <button class="popup__button" type="button">Сохранить</button>
                       </form>
-                      
-                </div>
             </div>
         </section>
     </div>
-    <script src="./index.js" defer></script>
+    <script src="./JS/index.js" defer></script>
 </body>
 </html>
