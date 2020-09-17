@@ -1,4 +1,6 @@
 .profile__initial{
+    display:grid;
+    grid-template-columns: 90% 10%;
     color: white;
     margin-left: 30px;
 }
