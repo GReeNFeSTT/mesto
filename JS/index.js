@@ -1,16 +1,14 @@
-const popupSaveButton = document.querySelector('.popup__button')
+const popupSaveButton = document.querySelector('.popup__profile')
 const popup = document.querySelector('.popup')
-const popupOpenButton = document.querySelector('.profile__initial_edit')
+const popupOpenButton = document.querySelector('.profile__initial-edit')
 const popupCloseButton = document.querySelector('.popup__close')
 const nameInput = document.querySelector('.popup__item_el_name')
 const jobInput = document.querySelector('.popup__item_el_profession')
-const profileName = document.querySelector('.profile__initial_name')
-const profileJob = document.querySelector('.profile__initial_profession')
+const profileName = document.querySelector('.profile__initial-name')
+const profileJob = document.querySelector('.profile__initial-profession')
 
-console.log({popup, popupCloseButton, popupOpenButton})
 
 const popupOpen = (event) => {
-    console.log('Event: ', event)
     popup.classList.add('popup_is-opened')
     nameInput.value = profileName.textContent;
     jobInput.value = profileJob.textContent;
@@ -21,10 +19,6 @@ const popupClose = () => {
 }
 
 const popupCloseByClickOnOverlay = (event) => {
-    console.log({
-      target: event.target,
-      currentTarget: event.currentTarget,
-    })
     if (event.target!=event.currentTarget) {
         return
     }
@@ -44,7 +38,7 @@ const formSubmitHandler = (event) => {
 popupOpenButton.addEventListener('click', popupOpen) 
 popupCloseButton.addEventListener('click', popupClose)
 popup.addEventListener('click', popupCloseByClickOnOverlay)
-popupSaveButton.addEventListener('click', formSubmitHandler)
+popupSaveButton.addEventListener('submit', formSubmitHandler)
 //open
     //profileName.textContent = nameInput.value;
     // profileJob.textContent = jobInput.value;

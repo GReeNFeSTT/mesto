@@ -1,6 +1,6 @@
 .popup__close{
     margin-left: 455px;
-    background-image:  url(../../../images/Close.svg);
+    background-image:  url(../../../images/close.svg);
     align-self: center;
     background-color: transparent;
     border: none;
@@ -15,6 +15,6 @@
 }
 
 .popup__close:hover{
-    opacity: 0.5;
+    opacity: 0.6;
     cursor: pointer;
 }

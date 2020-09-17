@@ -1,4 +1,4 @@
-.profile__initial_edit{
+.profile__initial-edit{
     width: 24px;
     height: 24px;
     background-color: transparent;
@@ -7,24 +7,27 @@
     position: relative;
     margin-top: 40px;
 }
-.profile__initial_edit::before{
+.profile__initial-edit::before{
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(../../../../images/pansel.png);
+    background-image: url(../../../images/pencil.svg);
     position: absolute;
     content: '';
 }
-@media screen and (max-width: 999px){
-    .profile__initial_edit{
+@media screen and (max-width: 610px){
+    .profile__initial-edit{
         width: 18px;
-        height: 18px;   
+        height: 18px; 
+        position: absolute;  
+        right: 40px;
+        top: 250px;
     }
 }
-:hover.profile__initial_edit{
-    opacity: 0.5;
+:hover.profile__initial-edit{
+    opacity: 0.6;
     cursor: pointer;
 }

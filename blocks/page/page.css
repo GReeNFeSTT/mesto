@@ -12,4 +12,5 @@
     height: 100%;
     color:white;
     margin: auto;
+    min-width: 320px;
 }

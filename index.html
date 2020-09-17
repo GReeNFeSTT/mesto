@@ -16,12 +16,12 @@
                 <div class="profile__info">
                     <img class="profile__avatar" src="./images/avatar-image.jpg" alt="аватар">
                     <div class="profile__initial">
-                        <h1 class="profile__initial_name">Жак-Ив Кусто</h1>
-                        <p class="profile__initial_profession">Исследователь океана</p>
+                        <h1 class="profile__initial-name">Жак-Ив Кусто</h1>
+                        <p class="profile__initial-profession">Исследователь океана</p>
                     </div>
-                    <button class="profile__initial_edit" type="button"></button>
+                    <button class="profile__initial-edit" type="button"></button>
                 </div>
-                <button class="profile__button" type="button"></button>
+                <button aria-label="open" class="profile__button" type="button"></button>
             </section>
             <section class="elements">
                 <div class="element">
@@ -77,16 +77,16 @@
             <div class="popup__container">
                 
                  <h2 class="popup__title"> Редактировать профиль </h2>
-                     <form class="popup__profile" name="#" method="#" action="#">
+                     <form class="popup__profile" name="profile" method="get" action="#">
                          <fieldset class="popup__input-container">
-                              <input type="text" class="popup__item popup__item_el_name" id="heading" name="heading" placeholder="Имя Фамилия" >
-                              <input type="text" class="popup__item popup__item_el_profession" id="subheading" name="subheading" placeholder="Профессия">
+                              <input type="text" class="popup__item popup__item_el_name" id="heading" name="name" placeholder="Имя Фамилия" >
+                              <input type="text" class="popup__item popup__item_el_profession" id="subheading" name="job" placeholder="Профессия">
                          </fieldset>
-                         <button class="popup__button" type="button">Сохранить</button>
+                         <button class="popup__button" type="submit">Сохранить</button>
                       </form>
             </div>
         </section>
     </div>
-    <script src="./JS/index.js" defer></script>
+    <script src="./js/index.js" defer></script>
 </body>
 </html>
