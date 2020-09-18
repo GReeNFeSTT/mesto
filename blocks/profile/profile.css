@@ -4,6 +4,7 @@
 @import url(./__initial/profile__initial.css);
 @import url(./__initial-edit/profile__initial-edit.css);
 @import url(./__initial-name/profile__initial-name.css);
+@import url(./__initial-profession/profile__initial-profession.css);
 
 .profile{
     min-width: 868px;
