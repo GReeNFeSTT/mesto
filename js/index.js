@@ -1,4 +1,4 @@
-const popupSaveForm = document.querySelector('.popup__profile')
+const popupForm = document.querySelector('.popup__profile')
 const popup = document.querySelector('.popup')
 const popupOpenButton = document.querySelector('.profile__initial-edit')
 const popupCloseButton = document.querySelector('.popup__close')
@@ -38,7 +38,7 @@ const formSubmitHandler = (event) => {
 popupOpenButton.addEventListener('click', popupOpen) 
 popupCloseButton.addEventListener('click', popupClose)
 popup.addEventListener('click', popupCloseByClickOnOverlay)
-popupSaveForm.addEventListener('submit', formSubmitHandler)
+popupForm.addEventListener('submit', formSubmitHandler)
 //open
     //profileName.textContent = nameInput.value;
     // profileJob.textContent = jobInput.value;

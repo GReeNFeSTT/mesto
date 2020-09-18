@@ -5,12 +5,13 @@
         line-height: 22px;
         margin: 5px 4px 0px 31px;
         text-overflow: ellipsis;
-        max-width: 800px;
+        max-width: 300px;
         overflow: hidden;
         white-space: nowrap;
     }
     @media screen and (max-width: 999px){
         .profile__initial-profession{
+            max-width: 150px;
             font-size: 14px;
             line-height: 17px;
             margin-top: 14px;
