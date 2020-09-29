@@ -1,11 +1,10 @@
-
-.elements__like{
+.elements__like_on{
     width: 21px;
     height: 19px;
     align-self: center;
     background-color: transparent;
     border: none;
-    background-image: url('../../../images/like.svg');
+    background-image: url('../../../../images/blacklike.svg');
     background-size: cover;
     opacity: 1;
     transition: opacity 2s;

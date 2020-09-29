@@ -26,65 +26,58 @@
                 <button aria-label="open" class="profile__button" type="button"></button>
             </section>
             <section class="elements">
-                <div class="element">
-                    <img class="element__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Изображение">
-                    <div class="element__description">
-                        <h2 class="element__title">Карачаевск</h2> 
-                        <button class="elements__like" type="button"></button>
-                    </div>
-                </div>
-                <div class="element">
-                    <img class="element__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Изображение">
-                    <div class="element__description">
-                        <h2 class="element__title">Карачаевск</h2> 
-                        <button class="elements__like" type="button"></button>
-                    </div>
-                </div>
-                <div class="element">
-                    <img class="element__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Изображение">
-                    <div class="element__description">
-                        <h2 class="element__title">Карачаевск</h2> 
-                        <button class="elements__like" type="button"></button>
-                    </div>
-                </div>
-                <div class="element">
-                    <img class="element__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Изображение">
-                    <div class="element__description">
-                        <h2 class="element__title">Карачаевск</h2> 
-                        <button class="elements__like" type="button"></button>
-                    </div>
-                </div>
-                <div class="element">
-                    <img class="element__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Изображение">
-                    <div class="element__description">
-                        <h2 class="element__title">Карачаевск</h2> 
-                        <button class="elements__like" type="button"></button>
-                    </div>
-                </div>
-                <div class="element">
-                    <img class="element__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Изображение">
-                    <div class="element__description">
-                        <h2 class="element__title">Карачаево-Черкессия</h2> 
-                        <button class="elements__like" type="button"></button>
-                    </div>
-                </div>
             </section>
+                <template class="elements-template">
+                    <article class="element">
+                      <img src="" alt="" class="element__image">
+                      <div class="element__description">
+                        <h2 class="element__title"></h2>
+                        <button type="button" class="elements__like"></button>
+                        <button type="button" aria-label="delete" class="elements__delete-button">
+                          <img src="./images/trash.svg" alt="Удалить" class="element__delete">
+                        </button>
+                      </div>
+                    </article>
+                  </template>
+            
         </main>
         <footer class="footer">
             <span class="footer__copyright"> &copy; 2020. GReeNFeST </span>
         </footer>
 
-        <section class="popup">
-            <button class="popup__close" type="button"></button>
+        <section class="popup popup__image popup__image-open">
+            <div class="popup-zoom">
+              <div class="popup-zoom__image"></div>
+              <p class="popup-zoom__text">текст</p>
+              <button type="reset" class="popup__close popup__close_image" aria-label="Закрыть"></button>
+            </div>
+        </section>
+
+        <section class="popup popup_user">
+            <button class="popup__close popup__close_user" type="button"></button>
             <div class="popup__container">
                 
                  <h2 class="popup__title"> Редактировать профиль </h2>
-                     <form class="popup__profile" name="profile" method="get" action="#">
+                     <form class="popup__profile popup__profile_user" name="profile" method="get" action="#">
                          <fieldset class="popup__input-container">
                               <input type="text" class="popup__item popup__item_el_name" id="heading" name="name" placeholder="Имя Фамилия" >
                               <input type="text" class="popup__item popup__item_el_profession" id="subheading" name="job" placeholder="Профессия">
                          </fieldset>
-                         <button class="popup__button" type="submit">Сохранить</button>
+                         <button class="popup__button popup__button_user-edit" type="submit">Сохранить</button>
+                      </form>
+            </div>
+        </section>
+        <section class="popup popup_card">
+            <button class="popup__close popup__close_card" type="button"></button>
+            <div class="popup__container">
+                
+                 <h2 class="popup__title"> Новое место </h2>
+                     <form class="popup__profile popup__profile_card" name="profile" method="get" action="#">
+                         <fieldset class="popup__input-container">
+                              <input type="text" class="popup__item popup__item_el_place" id="heading" name="place" placeholder="Название" >
+                              <input type="text" class="popup__item popup__item_el_link" id="subheading" name="link" placeholder="Ссылка на картинку">
+                         </fieldset>
+                         <button class="popup__button popup__button_add-card" type="submit">Создать</button>
                       </form>
             </div>
         </section>

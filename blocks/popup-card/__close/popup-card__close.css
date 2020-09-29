@@ -1,0 +1,20 @@
+.popup-card__close{
+    margin-left: 455px;
+    background-image:  url(../../../images/close.svg);
+    align-self: center;
+    background-color: transparent;
+    border: none;
+    background-size: cover;
+    width: 52px;
+    height: 40px;
+}
+@media screen and (max-width: 480px) {
+    .popup__close{
+        margin-left: 250px;
+    }
+}
+
+.popup__close:hover{
+    opacity: 0.6;
+    cursor: pointer;
+}
