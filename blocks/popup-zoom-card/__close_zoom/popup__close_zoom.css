@@ -1,0 +1,5 @@
+.popup__close_zoom{
+    margin: 0;
+    align-self: flex-end;
+    margin-right: -45px;
+}

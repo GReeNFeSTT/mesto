@@ -1,0 +1,10 @@
+.popup-zoom-card__title{
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 15px;
+color: rgb(255, 255, 255);
+background-color: transparent;
+align-self: start;
+margin-top: 10px;
+}
