@@ -60,6 +60,11 @@ const saveUserData = () =>{
 
 const popupOpen = (popup) => { 
     popup.classList.add('popup_is-opened')
+    document.addEventListener("keydown", (event) => {
+        if (event.key==="Escape") {
+            popupClose(popup);
+        }
+      }, true);
 } 
  
 const popupClose = (popup) => { 

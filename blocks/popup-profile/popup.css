@@ -5,8 +5,9 @@
 @import url(./__title/popup__title.css);
 @import url(./__input-container/popup__input-container.css);
 @import url(./__button/popup__button.css);
-
-
+@import url(./__button/_inactive/popup__button_inactive.css);
+@import url(./__input-error/popup__input-error.css);
+@import url(./__input-error/_active/popup__input-error_active.css);
 
 
 .popup{

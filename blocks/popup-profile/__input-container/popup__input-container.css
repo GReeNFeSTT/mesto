@@ -7,4 +7,5 @@
     padding: 0;
     min-inline-size: min-content;
     border: none;
+    position: relative;
 }

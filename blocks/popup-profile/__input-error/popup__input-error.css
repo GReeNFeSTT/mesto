@@ -1,0 +1,15 @@
+
+.popup__input-error{
+    max-width: 300px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #ff0000;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transition: opacity 0.3s;
+    white-space: normal;
+}
