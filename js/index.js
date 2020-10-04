@@ -18,6 +18,7 @@ const popupCardZoom = document.querySelector('.popup-zoom-card')
 const popupZoomTitle = document.querySelector('.popup-zoom-card__title');
 const popupZoomImage = document.querySelector('.popup-zoom-card__image');
 const template = document.querySelector('.elements-template').content;
+const escCode = "Escape"
 
 const initialCards = [
     {
@@ -61,14 +62,26 @@ const saveUserData = () =>{
 const popupOpen = (popup) => { 
     popup.classList.add('popup_is-opened')
     document.addEventListener("keydown", (event) => {
-        if (event.key==="Escape") {
+        if (event.key===escCode) {
             popupClose(popup);
         }
       }, true);
 } 
+
+const validateReset = (popup) => {
+    const inputList = Array.from(popup.querySelectorAll('.popup__item'));
+
+    inputList.forEach((inputElement) => {
+      const errorElement = popup.querySelector(`#${inputElement.id}-error`);
+      if (errorElement.classList.contains('popup__input-error_active')) {
+        errorElement.classList.remove('popup__input-error_active')
+      }
+    })
+  }
  
 const popupClose = (popup) => { 
     popup.classList.remove('popup_is-opened');
+    validateReset(popup);
 } 
  
 const popupCloseByClickOnOverlayUser = (event) => { 
@@ -185,39 +198,3 @@ saveAddCardForm.addEventListener('submit', submitAddCardForm)
 addZoomCloseButton.addEventListener('click', closeAddZoomPopup)
 addCardPopup.addEventListener('click', popupCloseByClickOnOverlayCard) 
 popupCardZoom.addEventListener('click', popupCloseByClickOnOverlayZoom) 
-
-
-
-
-
-
-
-// function renderItem({name, link}) {
-//     const card = template.cloneNode(true);
-//     card.querySelector('.element__title').innerText = name;
-//     card.querySelector('.element__image').alt = name;
-//     card.querySelector('.element__image').src = link;
-
-// //Delete
-//     const deleteButton = card.querySelector('.elements__delete-button');
-//     deleteButton.addEventListener('click', function() {
-//         const cardDelete = deleteButton.closest('.element');
-//         cardDelete.remove();
-//     })
-// //Like
-//     const likeButton = card.querySelector('.elements__like');
-//     likeButton.addEventListener('click', function(evt) {
-//         evt.target.classList.toggle('elements__like_on');
-//         })
-        
-
-// //Zoom
-//     const image = card.querySelector('.element__image');
-//     image.onclick = () => {
-//         openZoomCardPopup(name, link)
-//     }
-   
-
-
-// cards.appendChild(card);
-// }
