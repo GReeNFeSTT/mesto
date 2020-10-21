@@ -29,16 +29,16 @@
             </section>
                 <template class="elements-template">
                     <article class="element">
-                      <img src="" alt="" class="element__image">
-                      <div class="element__description">
+                        <img src="" alt="" class="element__image">
+                        <div class="element__description">
                         <h2 class="element__title"></h2>
                         <button type="button" class="elements__like"></button>
                         <button type="button" aria-label="delete" class="elements__delete-button">
-                          <img src="./images/trash.svg" alt="Удалить" class="element__delete">
+                            <img src="./images/trash.svg" alt="Удалить" class="element__delete">
                         </button>
-                      </div>
+                        </div>
                     </article>
-                  </template>
+                </template>
             
         </main>
         <footer class="footer">
@@ -47,9 +47,9 @@
 
         <section class="popup popup__image popup__image-open">
             <div class="popup-zoom">
-              <div class="popup-zoom__image"></div>
-              <p class="popup-zoom__text">текст</p>
-              <button type="reset" class="popup__close popup__close_image" aria-label="Закрыть"></button>
+                <div class="popup-zoom__image"></div>
+                <p class="popup-zoom__text">текст</p>
+                <button type="reset" class="popup__close popup__close_image" aria-label="Закрыть"></button>
             </div>
         </section>
 
@@ -57,48 +57,48 @@
             <button class="popup__close popup__close_user" type="button"></button>
             <div class="popup__container">
                 
-                 <h2 class="popup__title"> Редактировать профиль </h2>
-                     <form class="popup__profile popup__profile_user" name="profile" method="get" action="#" novalidate>
-                         <fieldset class="popup__input-container">
-                              <input type="text" class="popup__item popup__item_el_name" id="heading" name="name" placeholder="Имя Фамилия" 
+                <h2 class="popup__title"> Редактировать профиль </h2>
+                    <form class="popup__profile popup__profile_user" name="profile" method="get" action="#" novalidate>
+                        <fieldset class="popup__input-container">
+                            <input type="text" class="popup__item popup__item_el_name" id="heading" name="name" placeholder="Имя Фамилия" 
                                 required
                                 minlength="2"
                                 maxlength="40">
                                 <span class="popup__input-error" id="heading-error">text</span>
-                         </fieldset>
-                         <fieldset class="popup__input-container">
-                              <input type="text" class="popup__item popup__item_el_profession" id="subheading" name="job" placeholder="Профессия"
+                        </fieldset>
+                        <fieldset class="popup__input-container">
+                            <input type="text" class="popup__item popup__item_el_profession" id="subheading" name="job" placeholder="Профессия"
                                 required
                                 minlength="2"
                                 maxlength="200">
-                                 <span class="popup__input-error" id="subheading-error">text</span>
-                         </fieldset>
-                         <button class="popup__button popup__button_user-edit" type="submit">Сохранить</button>
-                      </form>
+                                <span class="popup__input-error" id="subheading-error">text</span>
+                        </fieldset>
+                        <button class="popup__button popup__button_user-edit" type="submit">Сохранить</button>
+                    </form>
             </div>
         </section>
         <section class="popup popup_card">
             <button class="popup__close popup__close_card" type="button"></button>
             <div class="popup__container">
                 
-                 <h2 class="popup__title"> Новое место </h2>
-                     <form class="popup__profile popup__profile_card" name="profile" method="get" action="#">
-                         <fieldset class="popup__input-container">
-                              <input type="text" class="popup__item popup__item_el_place" id="heading" name="place" placeholder="Название" 
+                <h2 class="popup__title"> Новое место </h2>
+                    <form class="popup__profile popup__profile_card" name="profile" method="get" action="#">
+                        <fieldset class="popup__input-container">
+                            <input type="text" class="popup__item popup__item_el_place" id="heading" name="place" placeholder="Название" 
                                 required
                                 minlength="1"
                                 maxlength="30">
                                 <span class="popup__input-error" id="heading-error"></span>
                             </fieldset>
                         <fieldset class="popup__input-container">
-                              <input type="text" class="popup__item popup__item_el_link" id="subheading" name="link" placeholder="Ссылка на картинку" 
-                              type="url" 
-                              pattern="https?://.+" 
-                              required>
-                              <span class="popup__input-error" id="subheading-error"></span>
-                         </fieldset>
-                         <button class="popup__button popup__button_add-card" type="submit">Создать</button>
-                      </form>
+                            <input type="text" class="popup__item popup__item_el_link" id="subheading" name="link" placeholder="Ссылка на картинку" 
+                            type="url" 
+                            pattern="https?://.+" 
+                            required>
+                            <span class="popup__input-error" id="subheading-error"></span>
+                        </fieldset>
+                        <button class="popup__button popup__button_add-card" type="submit">Создать</button>
+                    </form>
             </div>
         </section>
 
@@ -111,8 +111,6 @@
         </section>
         
     </div>
-    <script src="./js/validate.js" defer></script>
-    <script src="./js/index.js" defer></script>
-    
+    <script src="./js/index.js" type="module" defer></script>
 </body>
 </html>
