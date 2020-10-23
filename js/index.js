@@ -42,7 +42,7 @@ const saveEditUserForm = document.querySelector('.popup__profile');
 
 
 const editUserPopup = document.querySelector('.popup_user'); 
-const formProfile = editUserPopup.querySelector('.popup__container');
+const formProfile = editUserPopup.querySelector('.popup__profile_user');
 const editUserOpenButton = document.querySelector('.profile__initial-edit'); 
 const editUserCloseButton = document.querySelector('.popup__close_user'); 
 const nameInput = document.querySelector('.popup__item_el_name'); 
@@ -52,7 +52,7 @@ const profileJob = document.querySelector('.profile__initial-profession');
 
 
 const addCardPopup = document.querySelector('.popup_card'); 
-const formPlace = addCardPopup.querySelector('.popup__container');
+const formPlace = addCardPopup.querySelector('.popup__profile_card');
 const editCardOpenButton = document.querySelector('.profile__button');
 const addCardCloseButton = document.querySelector('.popup__close_card'); 
 
@@ -67,6 +67,11 @@ const popupCardZoom = document.querySelector('.popup-zoom-card');
 
 const escCode = "Escape";
 
+
+const formPlaceValidation = new FormValidator(inputObj, formPlace);
+const formProfileValidation = new FormValidator(inputObj, formProfile);
+formPlaceValidation.enableValidation();
+formProfileValidation.enableValidation();
 
 initialCards.forEach(({name, link}) => {
     const card = new Card ({name, link}, template);
@@ -86,7 +91,7 @@ formPlace.addEventListener('submit', (evt) => {
 
     const card = new Card(newCard, template);
     const element = card.generateCard();
-    closePopup(addCardPopup, evt);
+    popupClose(addCardPopup, evt);
     cards.prepend(element);
 });
 
