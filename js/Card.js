@@ -6,11 +6,6 @@ class Card {
         this._link = data.link;
         this._cardSelector = cardSelector;
     }
-    // constructor({name, link}, selector) {
-    //     this._link = link;
-    //     this._name = name;
-    //     this._selector = selector;
-    // }
     
     _getTemplate() {
         const cardElement = document

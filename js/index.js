@@ -165,13 +165,6 @@ const openUserEditPopup = () => {
     popupOpen(editUserPopup);
 }
 
-// const openZoomCardPopup = (name, link) => {
-//     popupZoomTitle.textContent = name;
-//     popupZoomImage.alt = name;
-//     popupZoomImage.src = link;
-//     popupOpen(popupCardZoom);
-// }
-
 const closeUserEditPopup = (event) => {
     popupClose(editUserPopup, event);
 }

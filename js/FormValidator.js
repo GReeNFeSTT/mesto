@@ -12,7 +12,6 @@ class FormValidator {
     }
 
     _showInputError = (inputElement, errorMessage) => {
-        console.log(inputElement);
     const errorElement = this._formElement.querySelector(`#${inputElement.id}-error`);
     inputElement.parentElement.classList.add(this._inputErrorClass);
     errorElement.textContent = errorMessage;
@@ -65,7 +64,6 @@ class FormValidator {
     enableValidation() {
     this._formElement.addEventListener('submit', (evt) => evt.preventDefault());
     this._setEventListeners();
-    console.log(1)
     };
     
 }
