@@ -90,7 +90,7 @@ formPlace.addEventListener('submit', (evt) => {
     formPlace.reset();
 
     const card = new Card(newCard, template);
-    const element = card.generateCard();
+    const element = card._generateCard();
     popupClose(addCardPopup, evt);
     cards.prepend(element);
 });
@@ -106,16 +106,21 @@ const saveUserData = () =>{
     profileName.textContent = nameInput.value;
     profileJob.textContent = jobInput.value;
 } 
+const hendler = (event, popup, code) => {
+    console.log(1);
+    if (event.key===code) {
+        popupClose(popup);} 
+};
+
+const listenerPopupClose = (code, popup) => {
+    document.onkeydown = (event) => hendler(event, popup, code);
+}
 
 
-const popupOpen = (popup) => { 
-    popup.classList.add('popup_is-opened')
-    document.addEventListener("keydown", (event) => {
-        if (event.key===escCode) {
-            popupClose(popup);
-        }
-    }, true);
-} 
+const popupOpen = (popup) => {
+    popup.classList.add('popup_is-opened');
+    listenerPopupClose(escCode, popup);
+};
 
 const validateReset = (popup) => {
     const inputList = Array.from(popup.querySelectorAll('.popup__item'));
@@ -131,6 +136,7 @@ const validateReset = (popup) => {
 const popupClose = (popup) => { 
     popup.classList.remove('popup_is-opened');
     validateReset(popup);
+    document.onkeydown = null;
 } 
 
 const popupCloseByClickOnOverlayUser = (event) => { 
@@ -165,31 +171,21 @@ const openUserEditPopup = () => {
     popupOpen(editUserPopup);
 }
 
-const closeUserEditPopup = (event) => {
-    popupClose(editUserPopup, event);
-}
-
-const openAddCardPopup = () => {
-    popupOpen(addCardPopup);
-}
-
-const closeAddCardPopup = (event) => {
-popupClose(addCardPopup, event);
-}
-
-const closeAddZoomPopup = (event) => {
-    popupClose(popupCardZoom, event);
-}
-
-
+const openAddCardPopup = () => { 
+    popupOpen(addCardPopup); 
+} 
 
 editUserOpenButton.addEventListener('click', openUserEditPopup)  
-editUserCloseButton.addEventListener('click', closeUserEditPopup) 
+editUserCloseButton.addEventListener('click', (event) => {
+    if (event.target.classList.contains('popup') || event.target.classList.contains('popup__close')) {
+        popupClose(editUserPopup, event);
+      }
+} )
 editUserPopup.addEventListener('click', popupCloseByClickOnOverlayUser) 
 saveEditUserForm.addEventListener('submit', submitUserEditForm) 
 editCardOpenButton.addEventListener('click', openAddCardPopup)  
-addCardCloseButton.addEventListener('click', closeAddCardPopup) 
-addZoomCloseButton.addEventListener('click', closeAddZoomPopup)
+addCardCloseButton.addEventListener('click', (event) => popupClose(addCardPopup, event)) 
+addZoomCloseButton.addEventListener('click', (event) => popupClose(popupCardZoom, event))
 addCardPopup.addEventListener('click', popupCloseByClickOnOverlayCard) 
 popupCardZoom.addEventListener('click', popupCloseByClickOnOverlayZoom) 
 

@@ -16,7 +16,7 @@ class Card {
         return cardElement;
     }
 
-    generateCard() {
+    _generateCard() {
         this._element = this._getTemplate();
         const placeImage = this._element.querySelector('.element__image');
         placeImage.src = this._link;
