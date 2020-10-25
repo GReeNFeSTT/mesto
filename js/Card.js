@@ -55,9 +55,11 @@ class Card {
 
 getElement() {
     this._element = this._getTemplate();
-    this._element.querySelector('.element__title').textContent = this._name;
-    this._element.querySelector('.element__image').alt = this._name;
-    this._element.querySelector('.element__image').src = this._link;
+    const elementTitle = this._element.querySelector('.element__title');
+    const elementImage = this._element.querySelector('.element__image');
+    elementTitle.textContent = this._name;
+    elementImage.alt = this._name;
+    elementImage.src = this._link;
     this._setEventListeners();
     return this._element;
 }

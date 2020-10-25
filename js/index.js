@@ -181,11 +181,12 @@ editUserCloseButton.addEventListener('click', (event) => {
         popupClose(editUserPopup, event);
       }
 } )
-editUserPopup.addEventListener('click', popupCloseByClickOnOverlayUser) 
+
 saveEditUserForm.addEventListener('submit', submitUserEditForm) 
 editCardOpenButton.addEventListener('click', openAddCardPopup)  
 addCardCloseButton.addEventListener('click', (event) => popupClose(addCardPopup, event)) 
 addZoomCloseButton.addEventListener('click', (event) => popupClose(popupCardZoom, event))
+editUserPopup.addEventListener('click', popupCloseByClickOnOverlayUser)
 addCardPopup.addEventListener('click', popupCloseByClickOnOverlayCard) 
 popupCardZoom.addEventListener('click', popupCloseByClickOnOverlayZoom) 
 
