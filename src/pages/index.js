@@ -1,4 +1,6 @@
 
+import './index.css';
+
 import {initialCards,
     inputObj,
     editUserOpenButton,
@@ -39,6 +41,7 @@ const arrCards = new Section({
 
 
 function submitUserForm () {
+    debugger
     userInfo.setUserInfo(popupUser.getInputValues());
     this.close();
 }
